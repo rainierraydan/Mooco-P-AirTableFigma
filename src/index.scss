@@ -124,3 +124,29 @@ a:hover {
     background-color: #e9e9e9;
   }
 }
+
+// Ray
+
+.plugin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.primary-button {
+  padding: 8px 16px;
+  background-color: #18A0FB;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(#18A0FB, 5%);
+  }
+
+  &:active {
+    background-color: darken(#18A0FB, 10%);
+  }
+}

@@ -17,8 +17,15 @@ export const App = () => {
   }, []);
   return (
     <>
-      <main>
-        
+      <main className="plugin-container">
+        <button 
+          onClick={() => {
+            console.log('Button clicked!');
+          }}
+          className="primary-button"
+        >
+          Click me
+        </button>
       </main>
     </>
   );

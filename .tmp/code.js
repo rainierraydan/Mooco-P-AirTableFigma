@@ -1,0 +1,1 @@
+const l=(s,e="*")=>{figma.ui.postMessage(s,{origin:e})},a=(s,e,t="*")=>{l({event:s,data:e},t)},f=(s,e,t=!1)=>{const i=o=>{o.event===s&&(e(o),t&&figma.ui&&figma.ui.off("message",i))};figma.ui.on("message",i)};figma.showUI(__html__,{themeColors:!0,width:550,height:600});f("hello",s=>{console.log("code.ts"),alert(`Hello ${s.string}`),a("helloCallback",{result:!0})});
