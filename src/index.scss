@@ -129,11 +129,39 @@ a:hover {
 
 .plugin-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
   height: 100vh;
+
 }
 
+.credentials-form {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 16px;
+
+  input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-size: 14px;
+    
+    &:focus {
+      outline: none;
+      border-color: #18A0FB;
+    }
+  }
+}
+.plugin-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100vh;
+}
 .primary-button {
   padding: 8px 16px;
   background-color: #18A0FB;
@@ -141,6 +169,7 @@ a:hover {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  width: 100%;
 
   &:hover {
     background-color: darken(#18A0FB, 5%);
@@ -148,5 +177,10 @@ a:hover {
 
   &:active {
     background-color: darken(#18A0FB, 10%);
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
   }
 }

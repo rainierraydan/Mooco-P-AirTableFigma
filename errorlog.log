@@ -1,0 +1,78 @@
+VM1903:1 Console was cleared
+undefined
+vendor-core-5cb0669a40d5e002.min.js.br:77 [Local fonts] using agent
+jsvm-cpp.wasm.br:0x23106 Uncaught (in promise) RuntimeError: memory access out of bounds
+    at jsvm-cpp.wasm.br:0x23106
+    at jsvm-cpp.wasm.br:0x3a412
+    at jsvm-cpp.wasm.br:0x26724
+    at jsvm-cpp.wasm.br:0x33106
+    at jsvm-cpp.wasm.br:0x2c352
+    at jsvm-cpp.wasm.br:0x2bab3
+    at jsvm-cpp.wasm.br:0x11f6
+    at jsvm-cpp.wasm.br:0x6188
+    at 1506-b9c654027e16f7c5.min.js.br:801:87468
+$func166 @ jsvm-cpp.wasm.br:0x23106
+$func343 @ jsvm-cpp.wasm.br:0x3a412
+$func181 @ jsvm-cpp.wasm.br:0x26724
+$func290 @ jsvm-cpp.wasm.br:0x33106
+$func220 @ jsvm-cpp.wasm.br:0x2c352
+$func216 @ jsvm-cpp.wasm.br:0x2bab3
+$func13 @ jsvm-cpp.wasm.br:0x11f6
+$jsvm_runMicrotasksAndAutorelease @ jsvm-cpp.wasm.br:0x6188
+(anonymous) @ 1506-b9c654027e16f7c5.min.js.br:801
+Promise.then (async)
+o @ 1506-b9c654027e16f7c5.min.js.br:801
+newObject @ 1506-b9c654027e16f7c5.min.js.br:801
+newObject @ 1506-b9c654027e16f7c5.min.js.br:829
+deepWrap @ 1506-b9c654027e16f7c5.min.js.br:780
+iframeMessageHandler @ 1506-b9c654027e16f7c5.min.js.br:787
+I.toplevelWindowMessageChannel.port2.onmessage @ 1506-b9c654027e16f7c5.min.js.br:1010
+jsvm-cpp.wasm.br:0x23106 Uncaught (in promise) RuntimeError: memory access out of bounds
+    at jsvm-cpp.wasm.br:0x23106
+    at jsvm-cpp.wasm.br:0x3a412
+    at jsvm-cpp.wasm.br:0x26724
+    at jsvm-cpp.wasm.br:0x33106
+    at jsvm-cpp.wasm.br:0x2c352
+    at jsvm-cpp.wasm.br:0x2bab3
+    at jsvm-cpp.wasm.br:0x11f6
+    at jsvm-cpp.wasm.br:0x6188
+    at 1506-b9c654027e16f7c5.min.js.br:801:87468
+$func166 @ jsvm-cpp.wasm.br:0x23106
+$func343 @ jsvm-cpp.wasm.br:0x3a412
+$func181 @ jsvm-cpp.wasm.br:0x26724
+$func290 @ jsvm-cpp.wasm.br:0x33106
+$func220 @ jsvm-cpp.wasm.br:0x2c352
+$func216 @ jsvm-cpp.wasm.br:0x2bab3
+$func13 @ jsvm-cpp.wasm.br:0x11f6
+$jsvm_runMicrotasksAndAutorelease @ jsvm-cpp.wasm.br:0x6188
+(anonymous) @ 1506-b9c654027e16f7c5.min.js.br:801
+Promise.then (async)
+o @ 1506-b9c654027e16f7c5.min.js.br:801
+newString @ 1506-b9c654027e16f7c5.min.js.br:801
+newString @ 1506-b9c654027e16f7c5.min.js.br:829
+deepWrap @ 1506-b9c654027e16f7c5.min.js.br:780
+(anonymous) @ 1506-b9c654027e16f7c5.min.js.br:790
+Promise.then (async)
+cb @ 1506-b9c654027e16f7c5.min.js.br:790
+(anonymous) @ 1506-b9c654027e16f7c5.min.js.br:787
+conditionalEditScope @ 1506-b9c654027e16f7c5.min.js.br:790
+(anonymous) @ 1506-b9c654027e16f7c5.min.js.br:787
+(anonymous) @ 1506-b9c654027e16f7c5.min.js.br:1037
+S.e.invokeCallback @ 1506-b9c654027e16f7c5.min.js.br:801
+70556 @ jsvm-cpp.js.br:9
+_emscripten_asm_const_int @ jsvm-cpp.js.br:9
+$func20 @ jsvm-cpp.wasm.br:0x59d8
+$func138 @ jsvm-cpp.wasm.br:0x136e3
+$func147 @ jsvm-cpp.wasm.br:0x152eb
+$func147 @ jsvm-cpp.wasm.br:0x17216
+$func369 @ jsvm-cpp.wasm.br:0x3efdc
+$func204 @ jsvm-cpp.wasm.br:0x29fd9
+$func147 @ jsvm-cpp.wasm.br:0x152eb
+$func294 @ jsvm-cpp.wasm.br:0x33c57
+$jsvm_callFunction @ jsvm-cpp.wasm.br:0xaecb
+callFunction @ 1506-b9c654027e16f7c5.min.js.br:801
+callFunction @ 1506-b9c654027e16f7c5.min.js.br:829
+iframeMessageHandler @ 1506-b9c654027e16f7c5.min.js.br:787
+I.toplevelWindowMessageChannel.port2.onmessage @ 1506-b9c654027e16f7c5.min.js.br:1010
+/design/IkZN1HRoVMZaWyhy5jX75u/Paramount-Test?node-id=0-1&p=f&viewport=138%2C29%2C0.25&t=NdyXpEM9tXenF5bZ-0:1 The resource https://www.figma.com/api/session/state?fuid=1466429443298670483 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+/design/IkZN1HRoVMZaWyhy5jX75u/Paramount-Test?node-id=0-1&p=f&viewport=138%2C29%2C0.25&t=NdyXpEM9tXenF5bZ-0:1 The resource https://www.figma.com/api/user/state?team_id=1466429447022362651&file_key=IkZN1HRoVMZaWyhy5jX75u&fuid=1466429443298670483 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
