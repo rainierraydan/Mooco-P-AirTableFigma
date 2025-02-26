@@ -120,6 +120,7 @@ function findTextLayers(node: SceneNode): TextNode[] {
 
 
 
+
 figma.ui.onmessage = async (msg) => {
   if (msg.type === 'save-credentials') {
     try {
@@ -198,24 +199,30 @@ figma.ui.onmessage = async (msg) => {
               
               for (const imageField of transformedFields['imageFields']) {
                 try {
-                  console.log(`📥 Importing image from URL: ${imageField.imageUrl}`);
-                  const response = await fetch(imageField.imageUrl);
-                  const imageBuffer = await response.arrayBuffer();
-                  const image = figma.createImage(new Uint8Array(imageBuffer));
+                  console.log(`🔍 Looking for image layer "${imageField.fieldName}"`);
+                  const existingLayer = frameNode.findOne(node => 
+                    node.type === "RECTANGLE" && 
+                    node.name.toLowerCase().replace(/\s+/g, '') === imageField.fieldName.toLowerCase().replace(/\s+/g, '')
+                  ) as RectangleNode;
                   
-                  const rect = figma.createRectangle();
-                  rect.name = imageField.fieldName;
-                  rect.resize(500, 500);
-                  rect.fills = [{
-                    type: 'IMAGE',
-                    scaleMode: 'FILL',
-                    imageHash: image.hash
-                  }];
-                  
-                  frameNode.appendChild(rect);
-                  console.log(`✅ Image "${imageField.fieldName}" imported successfully`);
+                  if (existingLayer) {
+                    console.log(`📥 Updating image in layer "${existingLayer.name}" with URL: ${imageField.imageUrl}`);
+                    const response = await fetch(imageField.imageUrl);
+                    const imageBuffer = await response.arrayBuffer();
+                    const image = figma.createImage(new Uint8Array(imageBuffer));
+                    
+                    existingLayer.fills = [{
+                      type: 'IMAGE',
+                      scaleMode: 'FILL',
+                      imageHash: image.hash
+                    }];
+                    
+                    console.log(`✅ Image "${imageField.fieldName}" updated successfully`);
+                  } else {
+                    console.log(`⚠️ No matching image layer found for "${imageField.fieldName}"`);
+                  }
                 } catch (error) {
-                  console.error(`❌ Failed to import image "${imageField.fieldName}":`, error);
+                  console.error(`❌ Failed to process image "${imageField.fieldName}":`, error);
                 }
               }
             }
@@ -248,6 +255,7 @@ listenTS("hello", (res) => {
   alert(`Hello ${res.string}`);
   dispatchTS("helloCallback", { result: true });
 });
+
 
 
 
