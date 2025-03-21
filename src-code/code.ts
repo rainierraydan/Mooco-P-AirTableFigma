@@ -163,9 +163,8 @@ figma.ui.onmessage = async (msg) => {
         // Inside processedRecords map function, add after transformedFields creation:
         Object.entries(record.fields).forEach(([key, value]) => {
           const transformedKey = key.toLowerCase().replace(/\s+/g, '');
-          transformedFields[transformedKey] = value;
+          transformedFields[transformedKey] = value ?? ''; // Asigna string vacío si el valor es null o undefined
         });
-
         
         const imageFields = findImageFields(transformedFields);
         if (imageFields.length > 0) {
@@ -191,6 +190,10 @@ figma.ui.onmessage = async (msg) => {
                   .replace(/\\r\\n/g, '\n')
                   .replace(/\\r/g, '\n');
                 layer.characters = formattedText;
+              } else {
+                // Si la key no existe en transformedFields, asigna string vacío
+                layer.characters = '';
+                layer.visible = false;
               }
             }
             // Add after text layers processing
@@ -237,6 +240,7 @@ figma.ui.onmessage = async (msg) => {
 
 
 
+
         return transformedFields;
       }));
 
@@ -255,6 +259,7 @@ listenTS("hello", (res) => {
   alert(`Hello ${res.string}`);
   dispatchTS("helloCallback", { result: true });
 });
+
 
 
 
